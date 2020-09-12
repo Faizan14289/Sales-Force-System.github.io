@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainPage"
+
+    >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bgHeader"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/header_register"
+        android:elevation="5dp"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Orders"
+            android:textStyle="bold"
+            android:textSize="20dp"
+
+            android:id="@+id/CustomerName" />
+        <!-- android:theme="@style/ToolbarTheme" -->
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.appcompat.widget.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bgHeader"
+        android:id="@+id/srch_medicine"
+        android:actionViewClass="android.support.v7.widget.SearchView">
+
+    </androidx.appcompat.widget.SearchView>
+    <include layout="@layout/content_main"
+        android:layout_below="@id/srch_medicine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:elevation="6dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/btn_cart"
+        android:src="@drawable/cart"
+        android:layout_margin="20dp"
+
+        />
+
+
+
+
+
+
+
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@+id/bgHeader"-->
+        <!--android:layout_margin="20dp">-->
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/rlayout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+            <!--<androidx.cardview.widget.CardView-->
+                <!--android:id="@+id/cv"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--app:cardCornerRadius="10dp"-->
+                <!--app:cardElevation="4dp"-->
+                <!--&gt;-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="400dp"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:paddingBottom="50dp">-->
+                    <!--<TextView-->
+
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:text="Hello"-->
+                        <!--android:layout_marginLeft="150dp"-->
+                        <!--android:layout_marginTop="160dp"-->
+                        <!--/>-->
+
+                <!--</LinearLayout>-->
+            <!--</androidx.cardview.widget.CardView>-->
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/cv"-->
+                <!--android:layout_alignLeft="@+id/cv"-->
+                <!--android:layout_alignRight="@+id/cv"-->
+                <!--android:layout_marginLeft="35dp"-->
+                <!--android:layout_marginTop="-30dp"-->
+                <!--android:layout_marginRight="35dp"-->
+                <!--android:elevation="10dp">-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/btn_location"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+
+                    <!--android:text="Share Location"-->
+                    <!--android:textAllCaps="false"-->
+                     <!--/>-->
+            <!--</RelativeLayout>-->
+        <!--</RelativeLayout>-->
+    <!--</ScrollView>-->
+
+    <!--
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+        -->
+
+</RelativeLayout>

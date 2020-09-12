@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bgHeader"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/header_register"
+        android:elevation="5dp"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+        <!-- android:theme="@style/ToolbarTheme" -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cart"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title" />
+
+    </androidx.appcompat.widget.Toolbar>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bgHeader"
+        android:id="@+id/priceTotal"
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toatal Price = "
+            android:textSize="20dp"
+            android:id="@+id/total_price"
+            android:textAlignment="center"
+            android:layout_marginLeft="0dp"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New +"
+            android:layout_alignParentRight="true"
+            android:id="@+id/btn_addMore"/>
+
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/CartView"
+        android:layout_below="@id/priceTotal"
+        android:layout_above="@+id/btn_next"
+
+        android:scrollbars="vertical"></androidx.recyclerview.widget.RecyclerView>
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+
+    android:text="Confirm Order"
+    android:id="@+id/btn_next"
+    android:textSize="20dp"
+    android:layout_margin="10dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Cancle order"
+        android:id="@+id/btn_Cancle"
+        android:textSize="15dp"
+        android:layout_margin="10dp"/>
+
+
+
+
+
+
+</RelativeLayout>
